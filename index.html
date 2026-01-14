@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="J.M. Hospital in Bangalore offers comprehensive health checkups, diabetes care, and 24-hour laboratory services. Book appointments online. A unit of Varahi Foundation.">
+    <meta name="keywords" content="J.M. Hospital, Bangalore Hospital, Health Checkup Bangalore, Diabetes Checkup, Master Health Check, 24 Hour Lab Bangalore, Medical Appointments, Varahi Foundation, Magadi Main Road Hospital">
+    <meta name="author" content="J.M. Hospital">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.jmhospitalsbangalore.com/">
+    <meta property="og:title" content="J.M. Hospital - Advanced Healthcare in Bangalore">
+    <meta property="og:description" content="Expert healthcare close to you. Comprehensive health packages and 24/7 lab services in Bangalore.">
+    <meta property="og:image" content="jmhospital.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.jmhospitalsbangalore.com/">
+    <meta property="twitter:title" content="J.M. Hospital - Advanced Healthcare in Bangalore">
+    <meta property="twitter:description" content="Expert healthcare close to you. Comprehensive health packages and 24/7 lab services in Bangalore.">
+    <meta property="twitter:image" content="jmhospital.png">
+
+    <title>J.M. Hospital - Advanced Healthcare in Bangalore</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            900: '#0c4a6e',
+                        },
+                        accent: {
+                            500: '#10b981',
+                            600: '#059669',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* hero-pattern removed/unused */
+    </style>
+</head>
+<body class="font-sans text-gray-700 bg-gray-50 antialiased">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo Area -->
+                <div class="flex items-center space-x-3">
+                    <!-- Logo Logic: Tries to show logo.png, falls back to icon if missing -->
+                    <div class="relative w-10 h-10">
+                        <img src="logo.png" 
+                             alt="J.M. Hospital Logo" 
+                             class="w-full h-full object-contain" 
+                             onerror="this.style.display='none'; document.getElementById('fallback-logo').classList.remove('hidden'); document.getElementById('fallback-logo').classList.add('flex');">
+                        
+                        <div id="fallback-logo" class="w-10 h-10 bg-brand-600 rounded-lg hidden items-center justify-center text-white shadow-lg absolute top-0 left-0">
+                            <i class="fa-solid fa-hospital text-xl"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col">
+                        <span class="font-heading font-bold text-xl text-gray-900 leading-none">J.M. HOSPITAL</span>
+                        <span class="text-xs text-gray-500 font-medium tracking-wide">A UNIT OF VARAHI FOUNDATION</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="font-medium text-gray-600 hover:text-brand-600 transition">Home</a>
+                    <a href="#packages" class="font-medium text-gray-600 hover:text-brand-600 transition">Health Packages</a>
+                    <a href="#insurance" class="font-medium text-gray-600 hover:text-brand-600 transition">Insurance</a>
+                    <a href="#contact" class="font-medium text-gray-600 hover:text-brand-600 transition">Contact</a>
+                    <a href="#book-appointment" class="bg-brand-600 hover:bg-brand-700 text-white px-5 py-2.5 rounded-full font-medium transition shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                        Book Appointment
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600 focus:outline-none text-2xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 py-4 px-4 shadow-lg absolute w-full">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="block text-gray-600 hover:text-brand-600 font-medium">Home</a>
+                <a href="#packages" class="block text-gray-600 hover:text-brand-600 font-medium">Health Packages</a>
+                <a href="#insurance" class="block text-gray-600 hover:text-brand-600 font-medium">Insurance</a>
+                <a href="#contact" class="block text-gray-600 hover:text-brand-600 font-medium">Contact</a>
+                <a href="#book-appointment" class="block bg-brand-600 text-white text-center py-3 rounded-lg font-medium">Book Appointment</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-8 lg:pt-24 lg:pb-12 bg-white relative overflow-hidden">
+        <!-- Decorative Background Elements for Left Side -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+            <div class="absolute -top-[10%] -left-[5%] w-[40rem] h-[40rem] bg-brand-50/80 rounded-full blur-3xl opacity-60"></div>
+            <div class="absolute top-[15%] left-[10%] w-32 h-32 bg-accent-50 rounded-full blur-2xl opacity-60 mix-blend-multiply animate-pulse"></div>
+        </div>
+
+        <div class="container mx-auto px-4 lg:px-8 relative z-10">
+            <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-6 lg:gap-8">
+                <div class="lg:w-1/2 space-y-3 lg:space-y-4">
+                    <!-- New "Live" Status Indicator to fill space and add dynamism -->
+                    <div class="flex items-center gap-2 mb-2">
+                         <span class="relative flex h-3 w-3">
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                        </span>
+                        <span class="text-xs font-bold text-green-600 uppercase tracking-widest">Accepting Patients</span>
+                    </div>
+
+                    <div class="inline-block px-4 py-1.5 bg-brand-50 text-brand-700 font-semibold rounded-full text-sm border border-brand-100 shadow-sm">
+                        <i class="fa-solid fa-clock mr-2"></i>24 Hours Laboratory Services
+                    </div>
+                    <h1 class="font-heading text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
+                        Expert Healthcare, <br>
+                        <span class="text-brand-600 relative inline-block">
+                            Close to You.
+                            <!-- Creative Underline -->
+                            <svg class="absolute w-full h-3 -bottom-2 left-0 text-brand-200 z-[-1]" viewBox="0 0 100 10" preserveAspectRatio="none">
+                                <path d="M0 5 Q 50 10 100 5" stroke="currentColor" stroke-width="3" fill="none" />
+                            </svg>
+                        </span>
+                    </h1>
+                    <p class="text-lg text-gray-600 leading-relaxed max-w-xl">
+                        Providing comprehensive health checkups and specialized care in Bangalore. Open on Sundays for your convenience.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-1">
+                        <a href="#packages" class="px-8 py-3.5 bg-brand-600 hover:bg-brand-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-1 text-center flex items-center justify-center gap-2 group">
+                            View Health Packages <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="tel:+919606651338" class="px-8 py-3.5 bg-white border border-gray-300 hover:border-brand-300 hover:text-brand-600 text-gray-700 font-semibold rounded-lg transition text-center flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-phone"></i> Call Emergency
+                        </a>
+                    </div>
+                    
+                    <!-- Trusted Badge -->
+                    <div class="pt-2 flex items-center gap-4 text-sm text-gray-500 font-medium">
+                        <div class="flex -space-x-2">
+                            <div class="w-8 h-8 rounded-full bg-gray-100 border-2 border-white flex items-center justify-center text-xs text-gray-400"><i class="fa-solid fa-user"></i></div>
+                            <div class="w-8 h-8 rounded-full bg-gray-100 border-2 border-white flex items-center justify-center text-xs text-gray-400"><i class="fa-solid fa-user"></i></div>
+                            <div class="w-8 h-8 rounded-full bg-gray-100 border-2 border-white flex items-center justify-center text-xs text-gray-400"><i class="fa-solid fa-user"></i></div>
+                        </div>
+                        <p>Trusted by 1000+ Families</p>
+                    </div>
+                </div>
+                <!-- Decorative Image Placeholder -->
+                <div class="lg:w-1/2 relative hidden md:block">
+                    <!-- Blobs kept for subtle depth, but background is white -->
+                    <div class="absolute -top-10 -right-10 w-72 h-72 bg-brand-100 rounded-full blur-3xl opacity-50"></div>
+                    <div class="absolute -bottom-10 -left-10 w-72 h-72 bg-accent-100 rounded-full blur-3xl opacity-50"></div>
+                    
+                    <!-- Added max-w-sm and mx-auto to limit width (squeezing vertically by maintaining aspect ratio) -->
+                    <div class="relative bg-white p-2 rounded-2xl shadow-2xl transform rotate-1 hover:rotate-0 transition duration-500 max-w-sm mx-auto">
+                        <!-- Image with h-auto to show full height without cropping -->
+                        <img src="jmhospital.png" 
+                             alt="J.M. Hospital Building" 
+                             class="rounded-xl w-full h-auto shadow-sm"
+                             onerror="this.style.display='none'; document.getElementById('hero-fallback').classList.remove('hidden'); document.getElementById('hero-fallback').classList.add('flex');">
+                        
+                        <!-- Fallback (Hidden by default, shown if image fails) - Reduced height to match squeezed look -->
+                        <div id="hero-fallback" class="bg-gradient-to-br from-brand-500 to-brand-700 rounded-xl h-[450px] w-full hidden items-center justify-center text-white flex-col p-8 text-center">
+                            <i class="fa-solid fa-heart-pulse text-6xl mb-4 opacity-80"></i>
+                            <h3 class="text-2xl font-heading font-bold">Your Health, Our Priority</h3>
+                            <p class="mt-2 opacity-90">Advanced diagnostics and care at affordable prices.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Divider: Heartbeat Line -->
+        <div class="absolute bottom-0 w-full flex justify-center items-center overflow-hidden">
+             <div class="w-full h-px bg-gray-100"></div>
+             <div class="px-4 text-brand-200 text-3xl">
+                 <i class="fa-solid fa-heart-pulse"></i>
+             </div>
+             <div class="w-full h-px bg-gray-100"></div>
+        </div>
+    </section>
+
+    <!-- Health Packages Section -->
+    <section id="packages" class="py-20 bg-white relative">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-gray-900 mb-4">Comprehensive Health Packages</h2>
+                <p class="text-gray-600">Choose the right checkup for you and your family. Designed for both men and women.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
+                
+                <!-- Package 1: Diabetes -->
+                <div class="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 relative group">
+                    <div class="absolute top-0 right-0 bg-accent-500 text-white text-xs font-bold px-3 py-1.5 rounded-bl-lg uppercase tracking-wide">
+                        Save ₹2250
+                    </div>
+                    <div class="p-8">
+                        <div class="w-14 h-14 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition">
+                            <i class="fa-solid fa-droplet"></i>
+                        </div>
+                        <h3 class="font-heading text-2xl font-bold text-gray-900 mb-2">Diabetes Health Check</h3>
+                        <div class="flex items-end gap-2 mb-6">
+                            <span class="text-4xl font-bold text-brand-600">₹1,750</span>
+                            <span class="text-lg text-gray-400 line-through mb-1">₹4,000</span>
+                        </div>
+                        
+                        <div class="space-y-3 mb-8">
+                            <p class="text-sm font-semibold text-gray-500 uppercase tracking-wider">Includes:</p>
+                            <ul class="space-y-2 text-gray-600 text-sm">
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-accent-500 mt-0.5"></i> <span><strong>CBC:</strong> Hb, TC, DC, Platelet, RBC, MCV, MCH, MCHC</span></li>
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-accent-500 mt-0.5"></i> <span>FBS & PPBS, HbA1c</span></li>
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-accent-500 mt-0.5"></i> <span>Blood Urea, Serum Creatinine, Uric Acid</span></li>
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-accent-500 mt-0.5"></i> <span><strong>Lipid Profile:</strong> Cholesterol, Triglycerides, HDL, LDL, VLDL</span></li>
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-accent-500 mt-0.5"></i> <span><strong>Liver Function Test:</strong> Bilirubin, Protein, SGOT, SGPT, etc.</span></li>
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-accent-500 mt-0.5"></i> <span>Electrolytes, Urine Routine</span></li>
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-accent-500 mt-0.5"></i> <span>ECG & USG</span></li>
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-accent-500 mt-0.5"></i> <span>Consultation & Diet Counselling</span></li>
+                            </ul>
+                        </div>
+                        
+                        <a href="#book-appointment" onclick="selectService('diabetes')" class="block w-full text-center bg-gray-50 hover:bg-brand-600 hover:text-white border border-gray-200 text-gray-800 font-semibold py-3 rounded-xl transition duration-300">
+                            Book This Package
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Package 2: Master Health -->
+                <div class="bg-white rounded-2xl shadow-xl border-2 border-brand-500 overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 relative group">
+                    <div class="bg-brand-600 text-white text-center py-2 text-sm font-semibold tracking-wide uppercase">
+                        Most Popular
+                    </div>
+                    <div class="absolute top-8 right-0 bg-accent-500 text-white text-xs font-bold px-3 py-1.5 rounded-bl-lg uppercase tracking-wide">
+                        Save ₹3101
+                    </div>
+                    <div class="p-8">
+                        <div class="w-14 h-14 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition">
+                            <i class="fa-solid fa-user-doctor"></i>
+                        </div>
+                        <h3 class="font-heading text-2xl font-bold text-gray-900 mb-2">Master Health Check</h3>
+                        <div class="flex items-end gap-2 mb-6">
+                            <span class="text-4xl font-bold text-brand-600">₹2,499</span>
+                            <span class="text-lg text-gray-400 line-through mb-1">₹5,600</span>
+                        </div>
+                        
+                        <div class="space-y-3 mb-8">
+                            <p class="text-sm font-semibold text-gray-500 uppercase tracking-wider">Includes Everything in Diabetes +</p>
+                            <ul class="space-y-2 text-gray-600 text-sm">
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-brand-600 mt-0.5"></i> <span><strong>Infection Screen:</strong> HIV, HBsAg, VDRL</span></li>
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-brand-600 mt-0.5"></i> <span><strong>Thyroid:</strong> TSH</span></li>
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-brand-600 mt-0.5"></i> <span>Blood Grouping</span></li>
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-brand-600 mt-0.5"></i> <span>Calcium & Phosphorus</span></li>
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-brand-600 mt-0.5"></i> <span>Stool Routine</span></li>
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-brand-600 mt-0.5"></i> <span>Chest X-Ray</span></li>
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-brand-600 mt-0.5"></i> <span>Internal Medicine Consultation</span></li>
+                            </ul>
+                        </div>
+                        
+                        <a href="#book-appointment" onclick="selectService('master')" class="block w-full text-center bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3 rounded-xl transition duration-300 shadow-md">
+                            Book This Package
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Booking Section -->
+    <section id="book-appointment" class="py-24 bg-brand-900 relative">
+        <!-- Top Divider (Wave White) -->
+        <div class="absolute top-0 left-0 w-full overflow-hidden leading-none rotate-180">
+            <svg class="relative block w-[calc(100%+1.3px)] h-[50px] md:h-[80px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="fill-white"></path>
+            </svg>
+        </div>
+
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 30px 30px;"></div>
+        
+        <div class="container mx-auto px-4 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                <!-- Text Content -->
+                <div class="lg:w-1/2 text-white">
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold mb-6">Ready to prioritize your health?</h2>
+                    <p class="text-brand-100 text-lg mb-8 leading-relaxed">
+                        Book an appointment today. Our laboratory services are open 24 hours, including Sundays.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-brand-800 flex items-center justify-center text-brand-300 text-xl border border-brand-700">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-brand-300 uppercase font-semibold">Call Us Directly</p>
+                                <p class="text-xl font-bold">+91 96066 51338 / +91 81474 73778</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-brand-800 flex items-center justify-center text-brand-300 text-xl border border-brand-700">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-brand-300 uppercase font-semibold">Visit Us</p>
+                                <p class="text-white">Magadi Main Road, Bangalore - 560091</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="lg:w-1/2 w-full">
+                    <form id="appointmentForm" class="bg-white p-8 rounded-2xl shadow-2xl">
+                        <h3 class="font-heading text-2xl font-bold text-gray-900 mb-6 border-b pb-4">Book Appointment</h3>
+                        
+                        <div class="grid md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition" placeholder="John Doe" required>
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition" placeholder="+91 98765 43210" required>
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="service" class="block text-sm font-medium text-gray-700 mb-2">Service Type</label>
+                                <div class="relative">
+                                    <select id="service" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition appearance-none bg-white">
+                                        <option value="general">General Consultation</option>
+                                        <option value="diabetes">Diabetes Health Check (₹1750)</option>
+                                        <option value="master">Master Health Check (₹2499)</option>
+                                        <option value="lab">Laboratory Service</option>
+                                    </select>
+                                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-700">
+                                        <i class="fa-solid fa-chevron-down text-xs"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="date" class="block text-sm font-medium text-gray-700 mb-2">Preferred Date</label>
+                                <input type="date" id="date" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Additional Message (Optional)</label>
+                            <textarea id="message" rows="3" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition" placeholder="Any specific concerns?"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-4 rounded-xl transition duration-300 shadow-lg transform active:scale-95">
+                            Confirm Booking
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Divider (Wave to Gray-50) -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+            <svg class="relative block w-[calc(100%+1.3px)] h-[50px] md:h-[80px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="fill-gray-50"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Insurance Section -->
+    <section id="insurance" class="py-24 bg-gray-50 relative">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-heading text-3xl font-bold text-gray-900 mb-4">Insurance Partners & TPAs</h2>
+                <p class="text-gray-600">We have tie-ups with leading insurance providers for cashless treatments.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Public Sector -->
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                            <i class="fa-solid fa-building-columns"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-gray-800">Public Sector</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i>New India Assurance Co Ltd.</li>
+                        <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i>United India Insurance Co Ltd.</li>
+                        <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i>Oriental Insurance Co Ltd.</li>
+                        <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i>National Insurance Co Ltd.</li>
+                    </ul>
+                </div>
+
+                <!-- Private Sector -->
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-gray-800">Private Sector</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-600 columns-1">
+                        <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i>HDFC Ergo / Bajaj Allianz</li>
+                        <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i>Future Generali / Iffco Tokio</li>
+                        <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i>Tata AIG / Cigna TTK</li>
+                        <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i>Max Bupa / Reliance</li>
+                        <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i>Star Health / Religare</li>
+                    </ul>
+                </div>
+
+                <!-- TPAs -->
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-600">
+                            <i class="fa-solid fa-file-signature"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-gray-800">TPA List</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i>Medi Assist / Vidal / MD India</li>
+                        <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i>Dedicated / Raksha / Good Health</li>
+                        <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i>E Meditek / Family Health Plan</li>
+                        <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i>Health India / Medicare / Vipul</li>
+                        <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i>United Health Care / Safeway</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Divider (Tilt to Dark Footer) -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+             <svg class="relative block w-[calc(100%+1.3px)] h-[40px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M1200,0H0V120H281.94C572.9,116.24,602.45,3.86,602.45,3.86h0S632,116.24,923,120h277Z" class="fill-gray-900"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-gray-300 pt-16 pb-12">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-8 h-8 bg-brand-600 rounded flex items-center justify-center text-white">
+                            <i class="fa-solid fa-hospital"></i>
+                        </div>
+                        <span class="font-heading font-bold text-xl text-white">J.M. HOSPITAL</span>
+                    </div>
+                    <p class="text-sm text-gray-400 mb-4">A Unit of Varahi Foundation.</p>
+                    <p class="text-sm text-gray-400">Compassionate care with advanced technology for all your medical needs.</p>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="lg:col-span-2">
+                    <h4 class="text-white font-bold mb-4">Contact Us</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-brand-500"></i>
+                            <span>284/16, Magadi Main Road, Chikkagollarahatti, Bengaluru - 560 091</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-brand-500"></i>
+                            <span>+91 96066 51338 / +91 81474 73778</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-brand-500"></i>
+                            <span>info@jmhospitalsbangalore.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#home" class="hover:text-brand-500 transition">Home</a></li>
+                        <li><a href="#packages" class="hover:text-brand-500 transition">Health Packages</a></li>
+                        <li><a href="#insurance" class="hover:text-brand-500 transition">Insurance Partners</a></li>
+                        <li><a href="#book-appointment" class="hover:text-brand-500 transition">Book Appointment</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
+                <p>&copy; 2023 J.M. Hospital. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Sticky Navbar effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+
+        // Pre-select service in form
+        function selectService(serviceValue) {
+            const select = document.getElementById('service');
+            select.value = serviceValue;
+            
+            // Highlight form section
+            const formSection = document.getElementById('book-appointment');
+            // Small delay to allow scroll to finish before focusing (optional visual cue)
+            setTimeout(() => {
+                document.getElementById('name').focus();
+            }, 800);
+        }
+
+        // Form Submission (Dummy)
+        const form = document.getElementById('appointmentForm');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const service = document.getElementById('service').options[document.getElementById('service').selectedIndex].text;
+            
+            // Simple alert to simulate success
+            alert(`Thank you, ${name}! \nYour request for '${service}' has been received. \nWe will contact you shortly to confirm.`);
+            form.reset();
+        });
+    </script>
+</body>
+</html>
