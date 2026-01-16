@@ -4,35 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO Meta Tags -->
     <meta name="description" content="J.M. Hospital in Bangalore offers comprehensive health checkups, diabetes care, and 24-hour laboratory services. Book appointments online. A unit of Varahi Foundation.">
     <meta name="keywords" content="J.M. Hospital, Bangalore Hospital, Health Checkup Bangalore, Diabetes Checkup, Master Health Check, 24 Hour Lab Bangalore, Medical Appointments, Varahi Foundation, Magadi Main Road Hospital">
     <meta name="author" content="J.M. Hospital">
     <meta name="robots" content="index, follow">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.jmhospitalsbangalore.com/">
-    <meta property="og:title" content="J.M. Hospital - Advanced Healthcare in Bangalore">
-    <meta property="og:description" content="Expert healthcare close to you. Comprehensive health packages and 24/7 lab services in Bangalore.">
-    <meta property="og:image" content="jmhospital.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.jmhospitalsbangalore.com/">
-    <meta property="twitter:title" content="J.M. Hospital - Advanced Healthcare in Bangalore">
-    <meta property="twitter:description" content="Expert healthcare close to you. Comprehensive health packages and 24/7 lab services in Bangalore.">
-    <meta property="twitter:image" content="jmhospital.png">
-
     <title>J.M. Hospital - Advanced Healthcare in Bangalore</title>
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 
     <script>
@@ -56,30 +38,46 @@
                             500: '#10b981',
                             600: '#059669',
                         }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'float-delayed': 'float 6s ease-in-out 3s infinite',
+                        'ecg-draw': 'dash 3s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        dash: {
+                            '0%': { strokeDashoffset: '1000' },
+                            '100%': { strokeDashoffset: '0' },
+                        }
                     }
                 }
             }
         }
     </script>
     <style>
-        /* hero-pattern removed/unused */
+        /* Corporate Dot Pattern */
+        .bg-dot-pattern {
+            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
     </style>
 </head>
 <body class="font-sans text-gray-700 bg-gray-50 antialiased">
 
-    <!-- Navigation -->
     <nav class="bg-white shadow-md fixed w-full z-50 transition-all duration-300" id="navbar">
         <div class="container mx-auto px-4 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- Logo Area -->
                 <div class="flex items-center space-x-3">
-                    <!-- Logo Logic: Tries to show logo.png, falls back to icon if missing -->
                     <div class="relative w-10 h-10">
                         <img src="logo.png" 
                              alt="J.M. Hospital Logo" 
                              class="w-full h-full object-contain" 
                              onerror="this.style.display='none'; document.getElementById('fallback-logo').classList.remove('hidden'); document.getElementById('fallback-logo').classList.add('flex');">
-                        
+                         
                         <div id="fallback-logo" class="w-10 h-10 bg-brand-600 rounded-lg hidden items-center justify-center text-white shadow-lg absolute top-0 left-0">
                             <i class="fa-solid fa-hospital text-xl"></i>
                         </div>
@@ -91,7 +89,6 @@
                     </div>
                 </div>
 
-                <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#home" class="font-medium text-gray-600 hover:text-brand-600 transition">Home</a>
                     <a href="#packages" class="font-medium text-gray-600 hover:text-brand-600 transition">Health Packages</a>
@@ -102,14 +99,12 @@
                     </a>
                 </div>
 
-                <!-- Mobile Menu Button -->
                 <button id="mobile-menu-btn" class="md:hidden text-gray-600 focus:outline-none text-2xl">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
         </div>
 
-        <!-- Mobile Menu Panel -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 py-4 px-4 shadow-lg absolute w-full">
             <div class="flex flex-col space-y-4">
                 <a href="#home" class="block text-gray-600 hover:text-brand-600 font-medium">Home</a>
@@ -121,18 +116,21 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="pt-24 pb-8 lg:pt-24 lg:pb-12 bg-white relative overflow-hidden">
-        <!-- Decorative Background Elements for Left Side -->
-        <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-            <div class="absolute -top-[10%] -left-[5%] w-[40rem] h-[40rem] bg-brand-50/80 rounded-full blur-3xl opacity-60"></div>
-            <div class="absolute top-[15%] left-[10%] w-32 h-32 bg-accent-50 rounded-full blur-2xl opacity-60 mix-blend-multiply animate-pulse"></div>
+        
+        <div class="absolute inset-0 bg-dot-pattern opacity-30 pointer-events-none"></div>
+        
+        <div class="absolute top-20 right-[10%] text-brand-100 text-6xl opacity-40 animate-float pointer-events-none">
+            <i class="fa-solid fa-plus"></i>
         </div>
-
+        <div class="absolute bottom-40 left-[5%] text-brand-50 text-8xl opacity-60 animate-float-delayed pointer-events-none rotate-12">
+            <i class="fa-solid fa-plus"></i>
+        </div>
+        
+        <div class="absolute top-[10%] left-[-5%] w-96 h-96 border-[40px] border-brand-50 rounded-full opacity-50 pointer-events-none"></div>
         <div class="container mx-auto px-4 lg:px-8 relative z-10">
             <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-6 lg:gap-8">
                 <div class="lg:w-1/2 space-y-3 lg:space-y-4">
-                    <!-- New "Live" Status Indicator to fill space and add dynamism -->
                     <div class="flex items-center gap-2 mb-2">
                          <span class="relative flex h-3 w-3">
                           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -148,7 +146,6 @@
                         Expert Healthcare, <br>
                         <span class="text-brand-600 relative inline-block">
                             Close to You.
-                            <!-- Creative Underline -->
                             <svg class="absolute w-full h-3 -bottom-2 left-0 text-brand-200 z-[-1]" viewBox="0 0 100 10" preserveAspectRatio="none">
                                 <path d="M0 5 Q 50 10 100 5" stroke="currentColor" stroke-width="3" fill="none" />
                             </svg>
@@ -166,7 +163,6 @@
                         </a>
                     </div>
                     
-                    <!-- Trusted Badge -->
                     <div class="pt-2 flex items-center gap-4 text-sm text-gray-500 font-medium">
                         <div class="flex -space-x-2">
                             <div class="w-8 h-8 rounded-full bg-gray-100 border-2 border-white flex items-center justify-center text-xs text-gray-400"><i class="fa-solid fa-user"></i></div>
@@ -176,21 +172,17 @@
                         <p>Trusted by 1000+ Families</p>
                     </div>
                 </div>
-                <!-- Decorative Image Placeholder -->
+                
                 <div class="lg:w-1/2 relative hidden md:block">
-                    <!-- Blobs kept for subtle depth, but background is white -->
-                    <div class="absolute -top-10 -right-10 w-72 h-72 bg-brand-100 rounded-full blur-3xl opacity-50"></div>
-                    <div class="absolute -bottom-10 -left-10 w-72 h-72 bg-accent-100 rounded-full blur-3xl opacity-50"></div>
+                    <div class="absolute -top-4 -right-4 w-full h-full bg-brand-100 rounded-2xl -z-10"></div>
+                    <div class="absolute -bottom-4 -left-4 w-full h-full border-2 border-brand-200 border-dashed rounded-2xl -z-10"></div>
                     
-                    <!-- Added max-w-sm and mx-auto to limit width (squeezing vertically by maintaining aspect ratio) -->
                     <div class="relative bg-white p-2 rounded-2xl shadow-2xl transform rotate-1 hover:rotate-0 transition duration-500 max-w-sm mx-auto">
-                        <!-- Image with h-auto to show full height without cropping -->
                         <img src="jmhospital.png" 
                              alt="J.M. Hospital Building" 
                              class="rounded-xl w-full h-auto shadow-sm"
                              onerror="this.style.display='none'; document.getElementById('hero-fallback').classList.remove('hidden'); document.getElementById('hero-fallback').classList.add('flex');">
-                        
-                        <!-- Fallback (Hidden by default, shown if image fails) - Reduced height to match squeezed look -->
+                         
                         <div id="hero-fallback" class="bg-gradient-to-br from-brand-500 to-brand-700 rounded-xl h-[450px] w-full hidden items-center justify-center text-white flex-col p-8 text-center">
                             <i class="fa-solid fa-heart-pulse text-6xl mb-4 opacity-80"></i>
                             <h3 class="text-2xl font-heading font-bold">Your Health, Our Priority</h3>
@@ -201,17 +193,25 @@
             </div>
         </div>
         
-        <!-- Divider: Heartbeat Line -->
-        <div class="absolute bottom-0 w-full flex justify-center items-center overflow-hidden">
-             <div class="w-full h-px bg-gray-100"></div>
-             <div class="px-4 text-brand-200 text-3xl">
-                 <i class="fa-solid fa-heart-pulse"></i>
-             </div>
-             <div class="w-full h-px bg-gray-100"></div>
+        <div class="absolute bottom-0 w-full flex justify-center items-end overflow-hidden leading-none h-16 text-brand-200">
+             <svg class="w-full h-full" viewBox="0 0 1000 100" preserveAspectRatio="none">
+                <path d="M0 80 H400 L420 20 L440 90 L460 50 L480 80 H1000" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="animate-ecg-draw"
+                      stroke-dasharray="1000"
+                      stroke-dashoffset="1000"
+                />
+            </svg>
+            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-brand-500 text-2xl bg-white p-2 rounded-full shadow-sm z-20">
+                <i class="fa-solid fa-heart-pulse animate-pulse"></i>
+            </div>
         </div>
-    </section>
+        </section>
 
-    <!-- Health Packages Section -->
     <section id="packages" class="py-20 bg-white relative">
         <div class="container mx-auto px-4 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16">
@@ -221,7 +221,6 @@
 
             <div class="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
                 
-                <!-- Package 1: Diabetes -->
                 <div class="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 relative group">
                     <div class="absolute top-0 right-0 bg-accent-500 text-white text-xs font-bold px-3 py-1.5 rounded-bl-lg uppercase tracking-wide">
                         Save ₹2250
@@ -256,7 +255,6 @@
                     </div>
                 </div>
 
-                <!-- Package 2: Master Health -->
                 <div class="bg-white rounded-2xl shadow-xl border-2 border-brand-500 overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 relative group">
                     <div class="bg-brand-600 text-white text-center py-2 text-sm font-semibold tracking-wide uppercase">
                         Most Popular
@@ -297,21 +295,17 @@
         </div>
     </section>
 
-    <!-- Appointment Booking Section -->
     <section id="book-appointment" class="py-24 bg-brand-900 relative">
-        <!-- Top Divider (Wave White) -->
         <div class="absolute top-0 left-0 w-full overflow-hidden leading-none rotate-180">
             <svg class="relative block w-[calc(100%+1.3px)] h-[50px] md:h-[80px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="fill-white"></path>
             </svg>
         </div>
 
-        <!-- Background Pattern -->
         <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 30px 30px;"></div>
         
         <div class="container mx-auto px-4 lg:px-8 relative z-10">
             <div class="flex flex-col lg:flex-row gap-12 items-center">
-                <!-- Text Content -->
                 <div class="lg:w-1/2 text-white">
                     <h2 class="font-heading text-3xl md:text-4xl font-bold mb-6">Ready to prioritize your health?</h2>
                     <p class="text-brand-100 text-lg mb-8 leading-relaxed">
@@ -341,7 +335,6 @@
                     </div>
                 </div>
 
-                <!-- Form -->
                 <div class="lg:w-1/2 w-full">
                     <form id="appointmentForm" class="bg-white p-8 rounded-2xl shadow-2xl">
                         <h3 class="font-heading text-2xl font-bold text-gray-900 mb-6 border-b pb-4">Book Appointment</h3>
@@ -391,7 +384,6 @@
             </div>
         </div>
 
-        <!-- Bottom Divider (Wave to Gray-50) -->
         <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
             <svg class="relative block w-[calc(100%+1.3px)] h-[50px] md:h-[80px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="fill-gray-50"></path>
@@ -399,7 +391,6 @@
         </div>
     </section>
 
-    <!-- Insurance Section -->
     <section id="insurance" class="py-24 bg-gray-50 relative">
         <div class="container mx-auto px-4 lg:px-8">
             <div class="text-center mb-12">
@@ -408,7 +399,6 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Public Sector -->
                 <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100">
                     <div class="flex items-center gap-3 mb-4">
                         <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
@@ -424,7 +414,6 @@
                     </ul>
                 </div>
 
-                <!-- Private Sector -->
                 <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100">
                     <div class="flex items-center gap-3 mb-4">
                         <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600">
@@ -441,7 +430,6 @@
                     </ul>
                 </div>
 
-                <!-- TPAs -->
                 <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100">
                     <div class="flex items-center gap-3 mb-4">
                         <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-600">
@@ -460,7 +448,6 @@
             </div>
         </div>
 
-        <!-- Bottom Divider (Tilt to Dark Footer) -->
         <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
              <svg class="relative block w-[calc(100%+1.3px)] h-[40px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path d="M1200,0H0V120H281.94C572.9,116.24,602.45,3.86,602.45,3.86h0S632,116.24,923,120h277Z" class="fill-gray-900"></path>
@@ -468,11 +455,9 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer id="contact" class="bg-gray-900 text-gray-300 pt-16 pb-12">
         <div class="container mx-auto px-4 lg:px-8">
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-                <!-- Brand -->
                 <div>
                     <div class="flex items-center space-x-3 mb-4">
                         <div class="w-8 h-8 bg-brand-600 rounded flex items-center justify-center text-white">
@@ -484,7 +469,6 @@
                     <p class="text-sm text-gray-400">Compassionate care with advanced technology for all your medical needs.</p>
                 </div>
 
-                <!-- Contact Info -->
                 <div class="lg:col-span-2">
                     <h4 class="text-white font-bold mb-4">Contact Us</h4>
                     <ul class="space-y-3">
@@ -503,7 +487,6 @@
                     </ul>
                 </div>
 
-                <!-- Quick Links -->
                 <div>
                     <h4 class="text-white font-bold mb-4">Quick Links</h4>
                     <ul class="space-y-2 text-sm">
@@ -521,7 +504,6 @@
         </div>
     </footer>
 
-    <!-- Custom Scripts -->
     <script>
         // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
